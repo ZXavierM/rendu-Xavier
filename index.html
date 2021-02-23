@@ -42,12 +42,12 @@ ls zeazeaedqsd (n'importe quoi)
 </code></pre>
 <p class="rendu">Expliquez quels fichiers sont affichés par chacune
 de ces commandes.</p>
-<p>La commande <code>ls .</code> affiche tous les répertoires présent, <br>
+<p><span class="reponse">La commande <code>ls .</code> affiche tous les répertoires présent, <br>
 la commande <code>ls *</code> fait de même, <br>
 la commande <code>ls ..</code> affiche les répertoires présent dans le répertoire du répertoire où l'on se trouve, <br>
 la commande <code>ls /</code> remonte au répertoire racine et affiche les répertoires présents dans celui-ci, <br>
 la commande <code>ls Desktop</code> vas chercher un répertoire du nom de "Desktop" dans le répertoire présent, <br>
-et la commande <code>ls zeazeaedqsd</code> fera de même.</p>
+et la commande <code>ls zeazeaedqsd</code> fera de même.</span></p>
 </li>
 <li>
 <p>Utilisez les flèches haut et bas pour rappeler des anciennes
@@ -97,7 +97,7 @@ pwd
 <li>
 <p class="rendu">Essayez d’effacer le dossier <code>CNAM</code>.
 Que se passe-t-til ?</p>
-<p>Le dossier <code>CNAM</code> possédant un enfant (test.txt), l'interface nous prévient que si on supprime le dossier CNAM, tous les enfants présent à l'intérieur seront effacés aussi, il nous demande donc confirmation.</p>
+<p><span class="reponse">Le dossier <code>CNAM</code> possédant un enfant (test.txt), l'interface nous prévient que si on supprime le dossier CNAM, tous les enfants présent à l'intérieur seront effacés aussi, il nous demande donc confirmation.</span></p>
 <h3>Attention avec la commande rm, elle peut effacer votre disque
 dur très rapidement...</h3>
 </li>
@@ -114,14 +114,14 @@ ls CNAM
 <code>ls</code>, <code>cd</code>, <code>pwd</code>,
 <code>rm</code>, <code>mkdir</code>, <code>rmdir</code>,
 <code>touch</code>, <code>cat</code> ?</h3>
-<p>La commande <code>ls</code> liste tous les répertoires présent dans celui où l'on se trouve, <br>
+<p><span class="reponse">La commande <code>ls</code> liste tous les répertoires présent dans celui où l'on se trouve, <br>
 la commande <code>cd</code> permet de changer de répertoire, <br>
 la commande <code>pwd</code> donne le chemin du répertoire où nous nous trouvons, <br>
 la commande <code>rm</code> permet de suprimmer un ou plusieurs document d'un répertoire, <br>
 la commande <code>mkdir</code> permet de créer un répertoire, <br>
 la commande <code>rmdir</code> permet d'en suprimmer un, <br>
 la commande <code>touch</code> permet de créer un document .txt, <br>
-et la commande <code>cat</code> permet d'afficher le contenu d'un document .txt.</p>
+et la commande <code>cat</code> permet d'afficher le contenu d'un document .txt.</span></p>
 </article>
 <article>
 <h2 id="git">Encore des manipulations dans le terminal</h2>
@@ -147,7 +147,7 @@ d'un dossier compressé <em>test.tar</em> sur votre bureau.</p>
 </li>
 <li><p class="rendu">Déplacez-vous vers le répertoire
 <em>Documents</em>. Notez la commande utilisée</p>
-<p>La commande utilisé est <code>cd</code>.</p>
+<p><span class="reponse">La commande utilisé est <code>cd</code>.</span></p>
 </li>
 <p>Tapez</p>
 <pre><code class=" hljs">tar -vxf test.tar</code></pre>
@@ -155,16 +155,16 @@ d'un dossier compressé <em>test.tar</em> sur votre bureau.</p>
 </li>
 <li><p class="rendu">Listez le contenu de votre archive décompactée.
 Quelle est la commande utilisée ?</p>
-<p>La commande utilisée est <code>ls (nom du fichier)</code>.</p></li>
+<p><span class="reponse">La commande utilisée est <code>ls (nom du fichier)</code>.</span></p></li>
 <li><p class="rendu">Supprimez votre archive test.tar. Quelle est la
 commande utilisée ?</p>
-<p>La commande utilisée est <code>rm test.tar</code>.</p></li>
+<p><span class="reponse">La commande utilisée est <code>rm test.tar</code>.</span></p></li>
 <p>Attention, cette commande supprime un fichier sans
 prévenir...</p>
 <li><p class="rendu">Supprimez le contenu de votre archive décompactée
 récursivement avec l'option <code>-r</code>. Quelle est la commande
 utilisée ?</p>
-<p>La commande utilisée est <code>rm -r (nom du fichier)</code>.</p></li>
+<p><span class="reponse">La commande utilisée est <code>rm -r (nom du fichier)</code>.</span></p></li>
 <h3>Attention : cette commande est encore plus dangereuse que la
 précédente... !!!</h3>
 </ol>
@@ -243,11 +243,11 @@ git <span class="hljs-keyword">log</span> --<span class=
 "hljs-keyword">stat</span>
 </code></pre>
 <span class="rendu">Que font-elles ?</span>
-<p><code>git status</code> renseigne sur le statut du dossier, et les dossier qui ont été ajouté et ceux ne l'ayant pas encore été par exemple. <br>
+<p><span class="reponse"><code>git status</code> renseigne sur le statut du dossier, et les dossier qui ont été ajouté et ceux ne l'ayant pas encore été par exemple. <br>
 <code>git diff</code> permet de voir les modifications entre les commits. <br>
 <code>git add a.txt</code> permet d'ajouter un document ou un dossier, ici le document a.txt. <br>
 <code>git commit -m "Premier commit"</code> est la commande utilisée pour s'oumettre des modifications avec un commentaire. <br>
-<code>git log --stat</code> permet de voir les logs (journal) du dossier.</p></li>
+<code>git log --stat</code> permet de voir les logs (journal) du dossier.</span></p></li>
 <li>
 <p>Créez un deuxième commit contenant le fichier
 <code>b.txt</code>. Lisez à nouveau la sortie de <code>git
@@ -264,12 +264,12 @@ git status
 </ol>
 <h3 class="rendu">Devoir #2 : Veuillez décrire le wokflow basique
 avec Git (liste des commandes surtout)</h3>
-<p>Le workflow basique avec Git est : <br> 
+<p><span class="reponse">Le workflow basique avec Git est : <br> 
 <code>- git help </code>: pour avoir la liste des différente commande et leur utilité. <br>
 <code>- git init </code>: essentielle pour initier un répertoire git. <br>
 <code>- git status </code>: pour connaître le status de son répertoire. <br>
 <code>- git add </code>: pour ajouter des documents/dossiers. <br>
-<code>- git commit </code>: pour soumettre des changements.</p>
+<code>- git commit </code>: pour soumettre des changements.</span></p>
 </article>
 <article>
 <h2 id="configurer-git">Configurer Git</h2>
@@ -342,13 +342,13 @@ encore</strong>.</p>
 <li>
 <p class="rendu">Faites un changement à <code>README.md</code> dans votre copie
 locale. Commitez. Essayer de pousser, que se passe-t-il ?</p>
-<p>Le push n'est pas accepté car la version du README n'est pas à jour, il faut déjà la pull avant de la push.</p>
+<p><span class="reponse">Le push n'est pas accepté car la version du README n'est pas à jour, il faut déjà la pull avant de la push.</span></p>
 </li>
 <li>
 <p>Tirez, puis lisez le log avec</p>
 <pre><code class=" hljs">git log --graph</code></pre>
 <p class="rendu">Que s’est-il passé ?</p>
-<p>La commande donne le journal des commit du répertoire.</p>
+<p><span class="reponse">La commande donne le journal des commit du répertoire.</span></p>
 <p>Poussez maintenant.</p>
 </li>
 </ol>
@@ -359,13 +359,13 @@ chaque commande, alors utilisez le code suivant sous Windows</p>
 <h3 class="rendu">Devoir #3 : Veuillez décrire le wokflow de
 modification et de mise en ligne de fichiers avec Git (liste des
 commandes)</h3>
-<p>Le workflow de modification et de mise en ligne de fichier avec git est : <br>
+<p><span class="reponse">Le workflow de modification et de mise en ligne de fichier avec git est : <br>
 <code>git clone</code> : pour cloner le répertoire en ligne et pouvoir le changer localement. <br>
 <code>git status</code> : important pour vérifier s'il n'y a pas eu de changement du répertoire. <br>
 <code>git pull</code> : essentielle pour mettre à jour le répertoire s'il y a eu des changements. <br>
 <code>git add</code> : pour bien intégré les changements de dossier ou document. <br>
 <code>git commit -m "commentaire"</code> : pour pouvoir effectuer des changement et avec un commentaire pour montrer ce qui a été modifié et pourquoi. <br>
-<code>git push</code> : pour envoyer les modifications vers le répertoire en ligne.</p>
+<code>git push</code> : pour envoyer les modifications vers le répertoire en ligne.</span></p>
 </article>
 <article>
 <h2 id="ma-page-personnelle">Ma page personnelle</h2>
