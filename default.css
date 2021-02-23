@@ -1,7 +1,7 @@
 .hljs {
     display: block;
     padding: .5em;
-    background: #f0f0f0
+    background: #000;
 }
 
 .hljs,
@@ -10,7 +10,7 @@
 .lisp .hljs-title,
 .clojure .hljs-built_in,
 .nginx .hljs-title {
-    color: black
+    color: #0F0;
 }
 
 .hljs-string,
@@ -41,7 +41,7 @@
 .asciidoc .hljs-header,
 .markdown .hljs-header,
 .coffeescript .hljs-attribute {
-    color: #800
+    color: #F00
 }
 
 .smartquote,
