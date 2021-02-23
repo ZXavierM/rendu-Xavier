@@ -1,0 +1,85 @@
+@import "http://fonts.googleapis.com/css?family=Marcellus&subset=latin";
+@import "http://fonts.googleapis.com/css?family=Oxygen+Mono";
+
+/* Page Structure */
+html, input, textarea, select { font-family: 'Marcellus', serif; font-size: 18pt; line-height: 1.3; }
+
+input, textarea, select { font-size: 80%; }
+
+code, .code { font-family: 'Oxygen Mono', mono; font-size: 0.9em; }
+
+footer { border-top: solid thin black; font-size: smaller; margin-top: 4ex; }
+
+body { text-align: justify; tab-size: 4; width: 85%; min-width: 200px; margin: auto; padding-left: 20px; counter-reset: section; }
+
+/* Titles */
+h1 { font-size: 2em; }
+h1 .subtitle { font-size: 0.5em; color: #999; }
+
+h1, h2, footer { margin-left: -20px; }
+
+h2:before { counter-increment: section; content: counter(section) ". "; }
+
+h2 { counter-reset: exercise; }
+
+.exercise:before { margin-left: -10px; counter-increment: exercise; content: "Exercice" " " counter(section) "." counter(exercise); font-weight: bold; font-size: 110%; }
+
+/* Inline style */
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+dt { font-weight: bold; }
+
+ul.menu { list-style-type: none; }
+ul.menu li { display: inline-block; border-right: solid thin; padding: 0 1ex; }
+ul.menu li:last-child { border-right: none; }
+
+.centered { margin: auto; text-align: center; }
+
+/* Tables */
+table { border-collapse: collapse; }
+
+td, th { padding: 1ex; }
+
+table.pretty td:not(:first-child), table.pretty th:not(:first-child) { border-left: solid thin black; }
+table.pretty th { border-bottom: solid thin black; }
+
+/* Source code */
+pre { clear: both; background-color: #eee; border-radius: 4px; border: solid thin #aaa; padding-left: 2ex; }
+
+:not(pre) > code { color: #d00; }
+
+/* Horrible hack, waiting for CSS3 text-decoration */
+a code, code a { border-bottom: dashed thin blue; }
+a code:hover, code a:hover { border-bottom: none; }
+
+/* Footnotes */
+.footnotesize, .footnote, .footnotes { font-size: 80%; }
+
+.footnote:before { content: "["; }
+.footnote:after { content: "]"; }
+
+.footnotes { border-top: solid thin #888; margin-left: -20px; margin-top: 2em; }
+
+.cite { font-style: italic; }
+
+blockquote.cite > p:first-of-type:before { content: open-quote; }
+blockquote.cite > p:last-of-type:after { content: close-quote; }
+
+.two-cols { display: flex; margin: 1em 0; }
+.two-cols > * { flex: 1 1 auto; margin-top: 0; margin-bottom: 0; }
+.two-cols > *:not(:first-child) { margin-left: 1em; }
+
+.rendu { border:2px dotted red; padding: 2px 8px; }
+
+article {border-top: 1px solid grey; }
+
+/* Print */
+@media print { .dont-print { display: none; }
+  body { font-size: 9pt; }
+  a.print-link:after { content: " <" attr(href) ">"; }
+  h1, h2, h3, h4 { page-break-after: avoid; }
+  .force-page-break { page-break-after: always; }
+  pre { page-break-inside: avoid; }
+  .allow-breaks { page-break-inside: auto; } }
+
