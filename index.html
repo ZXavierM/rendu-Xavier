@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head lang="fr">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Débuter avec Git</title>
+<link rel="stylesheet" href="default.min.css">
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+<div class="main">
+<div class="container">
+<h1>Débuter avec Git et GitHub</h1>
+<div class="rendu">Ce devoir est noté : Répondez à chaque question
+encadrée de pointillés rouges pour le rendu. Vous noterez les
+numéros de section avant chaque réponse : exemple 1.1 : votre
+réponse (Le terminal, question 1)</div>
+<article>
+<h2 id="le-terminal">Le terminal</h2>
+<p>Nous allons commencer par une prise en main du terminal de votre
+système.</p>
+<p>Pour <strong>Windows</strong>, installez l’émulateur de terminal
+PowerShell, que vous pouvez télécharger <a target="_blank" href=
+"https://technet.microsoft.com/en-gb/scriptcenter/powershell.aspx">ici</a>.</p>
+<p>Les utilisateurs Linux et Mac ont déjà un terminal installé,
+trouvez le raccourci et lancez-le.</p>
+<p>Dans les exemples suivants, aidez-vous avec un explorateur
+graphique de fichiers pour vous repérer dans l’arborescence.</p>
+<ol>
+<li>
+<p><span class="rendu">Que font les commandes <code>pwd</code>,
+<code>ls</code> et <code>fkggfejedof</code> ?</span></p>
+<p>La commande <code>pwd</code> donne le chemin du répertoire dans lequel nous nous trouvons, <br> la commande <code>ls</code> donne la liste des répertoires présent dans celui où nous nous trouvons <br> et la commande <code>fkggfejedof</code> est du charabia.</p>
+</li>
+<li>
+<p>Des commandes avec paramètres, maintenant, tapez</p>
+<pre><code class=" hljs">ls .
+ls *
+ls ..
+ls /
+ls Desktop
+ls zeazeaedqsd (n'importe quoi)
+</code></pre>
+<p class="rendu">Expliquez quels fichiers sont affichés par chacune
+de ces commandes.</p>
+<p>La commande <code>ls .</code> affiche tous les répertoires présent, <br>
+la commande <code>ls *</code> fait de même, <br>
+la commande <code>ls ..</code> affiche les répertoires présent dans le répertoire du répertoire où l'on se trouve, <br>
+la commande <code>ls /</code> remonte au répertoire racine et affiche les répertoires présents dans celui-ci, <br>
+la commande <code>ls Desktop</code> vas chercher un répertoire du nom de "Desktop" dans le répertoire présent, <br>
+et la commande <code>ls zeazeaedqsd</code> fera de même.</p>
+</li>
+<li>
+<p>Utilisez les flèches haut et bas pour rappeler des anciennes
+commandes saisies.</p>
+</li>
+<li>
+<p>Les bons émulateurs de terminal supportent
+l’<em>autocompletion</em>. Tapez <code>pw</code>, suivi de la
+touche <em>tab</em> une, deux fois. Tapez</p>
+<pre><code class=" hljs">ls Des</code></pre>
+<p>suivi de la touche <em>tab</em>, complétez jusqu’à ce que le
+choix soit unique.</p>
+</li>
+<li>
+<p>Les commandes <code>mkdir</code> et <code>rmdir</code> créent et
+détruisent un dossier vide. Testez-les.</p>
+</li>
+<li>
+<p>Créez un dossier nommé <code>CNAM</code>. Tapez les commandes
+(vous pouvez vous aider avec l’autocompletion)</p>
+<pre><code class=" hljs bash"><span class=
+"hljs-built_in">cd</span> CNAM
+<span class="hljs-built_in">pwd</span>
+touch fichier.txt
+ls
+ls ../CNAM
+</code></pre></li>
+<li>
+<p>Lancez un éditeur de texte. Sous Windows, tapez la commande
+<code>notepad</code>. Sous Linux tapez le nom d’un éditeur de texte
+présent sur votre système, par exemple <code>geany</code>. Sous
+Mac, tapez <code>TextEdit</code>.</p>
+</li>
+<li>
+<p>Écrivez quelques lignes dans l’éditeur de texte, et sauvegardez
+sous le nom <code>test.txt</code>.</p>
+</li>
+<li>
+<p>Revenez au terminal, tapez</p>
+<pre><code class=" hljs">cat test.txt
+</code></pre></li>
+<li>
+<p>Tapez</p>
+<pre><code class=" hljs bash"><span class=
+"hljs-built_in">cd</span> ..
+<span class="hljs-built_in">pwd</span>
+</code></pre></li>
+<li>
+<p class="rendu">Essayez d’effacer le dossier <code>CNAM</code>.
+Que se passe-t-til ?</p>
+<p>Le dossier <code>CNAM</code> possédant un enfant (test.txt), l'interface nous prévient que si on supprime le dossier CNAM, tous les enfants présent à l'intérieur seront effacés aussi, il nous demande donc confirmation.</p>
+</li>
+<li>
+<p>Tapez</p>
+<pre><code class=" hljs">rm CNAM/*
+ls CNAM
+</code></pre></li>
+<li>
+<p>Effacez le dossier <code>CNAM</code>.</p>
+</li>
+</ol>
+<h3 class="rendu">Travail #1 : Synthétisez, que font les commandes
+<code>ls</code>, <code>cd</code>, <code>pwd</code>,
+<code>rm</code>, <code>mkdir</code>, <code>rmdir</code>,
+<code>touch</code>, <code>cat</code> ?</h3>
+<p>La commande <code>ls</code> liste tous les répertoires présent dans celui où l'on se trouve, <br>
+la commande <code>cd</code> permet de changer de répertoire, <br>
+la commande <code>pwd</code> donne le chemin du répertoire où nous nous trouvons, <br>
+la commande <code>rm</code> permet de suprimmer un ou plusieurs document d'un répertoire, <br>
+la commande <code>mkdir</code> permet de créer un répertoire, <br>
+la commande <code>rmdir</code> permet d'en suprimmer un, <br>
+la commande <code>touch</code> permet de créer un document .txt, <br>
+et la commande <code>cat</code> permet d'afficher le contenu d'un document .txt.</p>
+</article>
+<article>
+<h2 id="git">Encore des manipulations dans le terminal</h2>
+<ol>
+<li>
+<p>Tapez</p>
+<pre><code class=" hljs">cd Desktop</code></pre>
+<p>pour vous positionner sur le bureau Windows. Choisissez un
+dossier pas trop volumineux pour le compresser.</p>
+</li>
+<li>
+<p>Tapez</p>
+<pre><code class=
+" hljs">tar -vcf test.tar ./VOTRE_DOSSIER/</code></pre>
+<p>Aidez-vous de l'auto-complétion (TAB). Vous disposez maintenant
+d'un dossier compressé <em>test.tar</em> sur votre bureau.</p>
+</li>
+<li>
+<p>Tapez</p>
+<pre><code class=" hljs">mv test.tar ~/Documents/</code></pre>
+<p>pour déplacer votre archive dans votre répertoire
+<em>Documents</em>.</p>
+</li>
+<li><p class="rendu">Déplacez-vous vers le répertoire
+<em>Documents</em>. Notez la commande utilisée</p>
+<p>La commande utilisé est <code>cd</code>.</p>
+</li>
+<li>
+<p>Tapez</p>
+<pre><code class=" hljs">tar -vxf test.tar</code></pre>
+<p>pour décompresser votre archive dans le répertoire courant.</p>
+</li>
+<li><p class="rendu">Listez le contenu de votre archive décompactée.
+Quelle est la commande utilisée ?</p>
+<p>La commande utilisée est <code>ls (nom du fichier)</code>.</p></li>
+<li><p class="rendu">Supprimez votre archive test.tar. Quelle est la
+commande utilisée ?</p>
+<p>La commande utilisée est <code>rm test.tar</code>.</p></li>
+<p>Attention, cette commande supprime un fichier sans
+prévenir...</p>
+<li><p class="rendu">Supprimez le contenu de votre archive décompactée
+récursivement avec l'option <code>-r</code>. Quelle est la commande
+utilisée ?</p>
+<p>La commande utilisée est <code>rm -r (nom du fichier)</code>.</p></li>
+<h3>Attention : cette commande est encore plus dangereuse que la
+précédente... !!!</h3>
+</ol>
+</article>
+<article>
+<h2 id="git">Git</h2>
+<p>Git est un client de contrôle de version (VCS) Open Source.
+Concrètement, Git garde une trace de tous les fichiers d'un projet
+(date, auteur, modifications), c'est donc un logiciel idéal pour le
+travail collaboratif.</p>
+<p>Nous pouvons maintenant passer à la découverte de Git. Pour
+cela, nous devons commencer par l’installer.</p>
+<h3 id="windows">Windows</h3>
+<p>Installer msysGit : <a target="_blank" href=
+"https://msysgit.github.io/">https://msysgit.github.io/</a>.</p>
+<p>Dans un cas comme dans l’autre, lorsque l’installeur vous le
+propose, choisissez les options :</p>
+<ul>
+<li><em>Run Git from the Windows command prompt</em>,</li>
+<li><em>Check out Windows style, commit Linux style line
+endings</em>.</li>
+</ul>
+<p>L’installation inclut un émulateur de terminal appelé <em>Git
+Bash</em>, similaire à PowerShell, mais avec un mode
+d’autocompletion plus adapté à Git.</p>
+<p>Alternativement, vous pouvez installer le client Git de GitHub,
+téléchargeable ici : <a href=
+"http://windows.github.com/">http://windows.github.com</a>
+(uniquement pour Windows 7 ou plus). msysGit sera installé
+avec.</p>
+<h3 id="mac">Mac</h3>
+<p>Le plus simple c’est d’installer le client Git de GitHub,
+téléchargeable ici : <a href=
+"http://mac.github.com/">http://mac.github.com</a>.</p>
+<p>Alternativement, vous pouvez taper <code>git</code> dans le
+terminal, et l’OS vous proposera d’installer Git s’il n’est pas
+déjà présent.</p>
+<h3 id="dcouverte-de-git">Découverte de Git</h3>
+<p>Dans ce cours nous allons utiliser Git à travers un client
+graphique. Sous Windows, PowerShell ou Git Bash peuvent être
+utilisés indifféremment, mais le deuxième se révélera plus pratique
+si vous avez pris l’habitude d’utiliser la touche <em>tab</em> pour
+compléter.</p>
+<ol>
+<li>
+<p>Tapez les commandes</p>
+<pre><code class=" hljs bash">git git <span class=
+"hljs-built_in">help</span></code></pre></li>
+<li>
+<p>Tapez</p>
+<pre><code class=" hljs bash">git <span class=
+"hljs-built_in">help</span> init</code></pre>
+<p>et lisez la documentation (touche <code>q</code> pour
+sortir).</p>
+</li>
+<li>
+<p>Créez un dossier, entrez dans le dossier (commande
+<code>cd</code>), puis initialisez-le pour Git avec <code>git
+init</code>.</p>
+</li>
+<li>
+<p>Créez deux fichiers de texte nommés <code>a.txt</code> et
+<code>b.txt</code>.</p>
+</li>
+<li>
+<p>Testez les commandes</p>
+<pre><code class=" hljs perl">git status
+git diff
+git add a.txt
+git status
+git commit -<span class="hljs-keyword">m</span> <span class=
+"hljs-string">"Premier commit"</span>
+git status
+git <span class="hljs-keyword">log</span> --<span class=
+"hljs-keyword">stat</span>
+</code></pre>
+<span class="rendu">Que font-elles ?</span>
+<p><code>git status</code> renseigne sur le statut du dossier, et les dossier qui ont été ajouté et ceux ne l'ayant pas encore été par exemple. <br>
+<code>git diff</code> permet de voir les modifications entre les commits. <br>
+<code>git add a.txt</code> permet d'ajouter un document ou un dossier, ici le document a.txt. <br>
+<code>git commit -m "Premier commit"</code> est la commande utilisée pour s'oumettre des modifications avec un commentaire. <br>
+<code>git log --stat</code> permet de voir les logs (journal) du dossier.</p></li>
+<li>
+<p>Créez un deuxième commit contenant le fichier
+<code>b.txt</code>. Lisez à nouveau la sortie de <code>git
+status</code> et de <code>git log</code>.</p>
+</li>
+<li>
+<p>Tapez</p>
+<pre><code class=" hljs">git rm a.txt
+ls
+git status
+</code></pre>
+<p>puis commitez le changement. Lisez le log.</p>
+</li>
+</ol>
+<h3 class="rendu">Devoir #2 : Veuillez décrire le wokflow basique
+avec Git (liste des commandes surtout)</h3>
+<p>Le workflow basique avec Git est : <br> 
+<code>- git help </code>: pour avoir la liste des différente commande et leur utilité. <br>
+<code>- git init </code>: essentielle pour initier un répertoire git. <br>
+<code>- git status </code>: pour connaître le status de son répertoire. <br>
+<code>- git add </code>: pour ajouter des documents/dossiers. <br>
+<code>- git commit </code>: pour soumettre des changements.</p>
+</article>
+<article>
+<h2 id="configurer-git">Configurer Git</h2>
+<p>Si vous ne l’avez pas déjà fait, il est temps de configurer
+votre client Git avec votre nom et votre adresse email (il ne doit
+pas nécessairement s’agir d’une adresse réelle). Ceci vous évitera
+quelques avertissements pénibles de la part de Git.</p>
+<p>Tapez les commandes</p>
+<pre><code class=" hljs php">git config --<span class=
+"hljs-keyword">global</span> user.name <span class=
+"hljs-string">"Votre nom"</span>
+git config --<span class=
+"hljs-keyword">global</span> user.email <span class=
+"hljs-string">"vous@votre_ordinateur"</span>
+git config --<span class=
+"hljs-keyword">global</span> push.<span class=
+"hljs-keyword">default</span> <span class=
+"hljs-string">"simple"</span>
+</code></pre>
+<h2 id="travailler-avec-une-copie-distante">Tu tires ou tu pousses
+?</h2>
+<p>Basiquement, avec Git, on fait deux choses : Soit on pousse
+notre code (<code>push</code>) vers Github, soit on tire notre code
+(<code>pull</code>) vers notre répertoire local. Nous allons voir
+maintenant comment créer une copie indépendante (<code>un
+fork</code>) d'un repository en ligne.</p>
+<p>N’oubliez pas de créer votre <a href=
+"https://github.com/">compte GitHub</a>, si ce n’est pas déjà
+fait...</p>
+<p>Connectez-vous sur GitHub, puis visitez <a href=
+"https://github.com/pixelman71100/cours-git/fork">ce lien</a>.
+GitHub va prendre quelques secondes pour vous en créer une copie
+personnelle (fork).</p>
+<p>Lisez le fichier de README, qui s’affiche dans le répertoire.
+Dans les réglages renommez ce repository, puis créez une copie
+locale du répertoire avec</p>
+<pre><code class=" hljs php">git <span class=
+"hljs-keyword">clone</span> <span class=
+"hljs-comment">url de votre repository</span>
+</code></pre>
+<ol>
+<li>
+<p>Dans l’interface web de GitHub, éditez le fichier
+<code>README.md</code>, et commitez les changements.</p>
+</li>
+<li>
+<p>Tirez les changement dans votre copie locale du répertoire :</p>
+<pre><code class=" hljs perl">cd cours-git/
+git status
+git <span class="hljs-keyword">log</span>
+git pull
+git status
+git <span class="hljs-keyword">log</span>
+</code></pre></li>
+<li>
+<p>Modifiez le fichier <code>README.md</code> sur votre ordinateur,
+commitez les changements, puis poussez vos changements sur
+GitHub :</p>
+<pre><code class=" hljs perl">git status
+git <span class="hljs-keyword">push</span>
+</code></pre></li>
+<li>
+<p>Faites encore un changement à <code>README.md</code> dans
+l’interface de GitHub. Commitez. <strong>Ne tirez pas
+encore</strong>.</p>
+</li>
+<li>
+<p class="rendu">Faites un changement à <code>README.md</code> dans votre copie
+locale. Commitez. Essayer de pousser, que se passe-t-il ?</p>
+<p>Le push n'est pas accepté car la version du README n'est pas à jour, il faut déjà la pull avant de la push.</p>
+</li>
+<li>
+<p>Tirez, puis lisez le log avec</p>
+<pre class="bash"><code class=" hljs">git log --graph</code></pre>
+<p class="rendu">Que s’est-il passé ?</p>
+<p>La commande donne le journal des commit du répertoire.</p>
+<p>Poussez maintenant.</p>
+</li>
+</ol>
+<p>Astuce : Si vous en avez marre de saisir votre login/passw à
+chaque commande, alors utilisez le code suivant sous Windows</p>
+<pre class="bash">git config credential.helper store</pre>
+<h3 class="rendu">Devoir #3 : Veuillez décrire le wokflow de
+modification et de mise en ligne de fichiers avec Git (liste des
+commandes)</h3>
+<p>Le workflow de modification et de mise en ligne de fichier avec git est : <br>
+<code>git clone</code> : pour cloner le répertoire en ligne et pouvoir le changer localement. <br>
+<code>git status</code> : important pour vérifier s'il n'y a pas eu de changement du répertoire. <br>
+<code>git pull</code> : essentielle pour mettre à jour le répertoire s'il y a eu des changements. <br>
+<code>git add</code> : pour bien intégré les changements de dossier ou document. <br>
+<code>git commit -m "commentaire"</code> : pour pouvoir effectuer des changement et avec un commentaire pour montrer ce qui a été modifié et pourquoi. <br>
+<code>git push</code> : pour envoyer les modifications vers le répertoire en ligne.</p>
+</article>
+<article>
+<h2 id="ma-page-personnelle">Ma page personnelle</h2>
+<p>Créez un fichier index.html dans votre repository. Dans les
+réglages de votre nouveau repository, créez une page web.</p>
+<ol>
+<li>
+<p>Créez une feuille de style externe style.css (en local) puis
+poussez vos modifs.</p>
+</li>
+<li>
+<p>Validez votre page HTML à l’aide du validateur du W3C (Extension
+Google Chrome).</p>
+</li>
+</ol>
+<h3 class="rendu">Devoir #4 : Transmettez-moi l'url de votre page
+web après avoir rempli les contraintes ci-dessus</h3>
+</article>
+<article>
+<h2 id="rendu">Rendu</h2>
+<h3>Votre travail sera noté.</h3>
+<h3 class="rendu">Créez un fichier sur GitHub, nommé
+rendu-votrePrenom et envoyez-moi l'url par mail au CNAM</h3>
+</article>
+<p>La suite c'est par <a href="git-02.html">ici</a></p>
+</div>
+<footer class="footer">
+<div class="container">
+<p>Jacques Vannet ©CNAM 2021, d'après les travaux de <a href=
+"https://github.com/defeo">Luca de Feo</a></p>
+</div>
+</footer>
+</div>
+</body>
+</html>
