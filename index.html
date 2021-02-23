@@ -57,9 +57,9 @@ commandes saisies.</p>
 <p>Les bons émulateurs de terminal supportent
 l’<em>autocompletion</em>. Tapez <code>pw</code>, suivi de la
 touche <em>tab</em> une, deux fois. Tapez</p>
-<pre><code class=" hljs">ls Des</code></pre>
-<p>suivi de la touche <em>tab</em>, complétez jusqu’à ce que le
-choix soit unique.</p>
+<pre><code class=" hljs">cd Des</code></pre>
+<p>suivi de la touche <em>tab</em> plusieurs fois, complétez
+jusqu’à ce que le choix soit unique.</p>
 </li>
 <li>
 <p>Les commandes <code>mkdir</code> et <code>rmdir</code> créent et
@@ -68,37 +68,38 @@ détruisent un dossier vide. Testez-les.</p>
 <li>
 <p>Créez un dossier nommé <code>CNAM</code>. Tapez les commandes
 (vous pouvez vous aider avec l’autocompletion)</p>
-<pre><code class=" hljs bash"><span class=
-"hljs-built_in">cd</span> CNAM
-<span class="hljs-built_in">pwd</span>
+<pre><code class=" hljs bash">cd CNAM
+pwd
 touch fichier.txt
 ls
 ls ../CNAM
 </code></pre></li>
 <li>
-<p>Lancez un éditeur de texte. Sous Windows, tapez la commande
-<code>notepad</code>. Sous Linux tapez le nom d’un éditeur de texte
-présent sur votre système, par exemple <code>geany</code>. Sous
-Mac, tapez <code>TextEdit</code>.</p>
+<p>Lancez un éditeur de texte. Sous Windows, tapez la commande</p>
+<pre><code class="hljs bash">notepad fichier.txt</code></pre>
+<p>Sous Linux tapez le nom d’un éditeur de texte présent sur votre
+système, par exemple <code>geany</code>. Sous Mac, tapez
+<code>TextEdit</code></p>
 </li>
 <li>
-<p>Écrivez quelques lignes dans l’éditeur de texte, et sauvegardez
-sous le nom <code>test.txt</code>.</p>
+<p>Écrivez quelques lignes dans l’éditeur de texte, et
+sauvegardez.</p>
 </li>
 <li>
 <p>Revenez au terminal, tapez</p>
-<pre><code class=" hljs">cat test.txt
+<pre><code class=" hljs">cat fichier.txt
 </code></pre></li>
 <li>
 <p>Tapez</p>
-<pre><code class=" hljs bash"><span class=
-"hljs-built_in">cd</span> ..
-<span class="hljs-built_in">pwd</span>
+<pre><code class=" hljs bash">cd ..
+pwd
 </code></pre></li>
 <li>
 <p class="rendu">Essayez d’effacer le dossier <code>CNAM</code>.
 Que se passe-t-til ?</p>
 <p>Le dossier <code>CNAM</code> possédant un enfant (test.txt), l'interface nous prévient que si on supprime le dossier CNAM, tous les enfants présent à l'intérieur seront effacés aussi, il nous demande donc confirmation.</p>
+<h3>Attention avec la commande rm, elle peut effacer votre disque
+dur très rapidement...</h3>
 </li>
 <li>
 <p>Tapez</p>
@@ -134,7 +135,7 @@ dossier pas trop volumineux pour le compresser.</p>
 <li>
 <p>Tapez</p>
 <pre><code class=
-" hljs">tar -vcf test.tar ./VOTRE_DOSSIER/</code></pre>
+" hljs">tar -vcf test.tar ./VOTRE_DOSSIER/ .</code></pre>
 <p>Aidez-vous de l'auto-complétion (TAB). Vous disposez maintenant
 d'un dossier compressé <em>test.tar</em> sur votre bureau.</p>
 </li>
@@ -148,7 +149,6 @@ d'un dossier compressé <em>test.tar</em> sur votre bureau.</p>
 <em>Documents</em>. Notez la commande utilisée</p>
 <p>La commande utilisé est <code>cd</code>.</p>
 </li>
-<li>
 <p>Tapez</p>
 <pre><code class=" hljs">tar -vxf test.tar</code></pre>
 <p>pour décompresser votre archive dans le répertoire courant.</p>
@@ -177,11 +177,14 @@ Concrètement, Git garde une trace de tous les fichiers d'un projet
 travail collaboratif.</p>
 <p>Nous pouvons maintenant passer à la découverte de Git. Pour
 cela, nous devons commencer par l’installer.</p>
+<p>Avant d'installer Git, vérifiez s'il n'est pas déjà installé...
+Dans le terminal, tapez</p>
+<pre><code class=" hljs">git</code></pre>
 <h3 id="windows">Windows</h3>
 <p>Installer msysGit : <a target="_blank" href=
 "https://msysgit.github.io/">https://msysgit.github.io/</a>.</p>
-<p>Dans un cas comme dans l’autre, lorsque l’installeur vous le
-propose, choisissez les options :</p>
+<p>Lorsque l’installeur vous le propose, choisissez les
+options :</p>
 <ul>
 <li><em>Run Git from the Windows command prompt</em>,</li>
 <li><em>Check out Windows style, commit Linux style line
@@ -202,7 +205,7 @@ téléchargeable ici : <a href=
 <p>Alternativement, vous pouvez taper <code>git</code> dans le
 terminal, et l’OS vous proposera d’installer Git s’il n’est pas
 déjà présent.</p>
-<h3 id="dcouverte-de-git">Découverte de Git</h3>
+<h3 id="decouverte-de-git">Découverte de Git</h3>
 <p>Dans ce cours nous allons utiliser Git à travers un client
 graphique. Sous Windows, PowerShell ou Git Bash peuvent être
 utilisés indifféremment, mais le deuxième se révélera plus pratique
@@ -211,12 +214,10 @@ compléter.</p>
 <ol>
 <li>
 <p>Tapez les commandes</p>
-<pre><code class=" hljs bash">git git <span class=
-"hljs-built_in">help</span></code></pre></li>
+<pre><code class=" hljs bash">git git help</code></pre></li>
 <li>
 <p>Tapez</p>
-<pre><code class=" hljs bash">git <span class=
-"hljs-built_in">help</span> init</code></pre>
+<pre><code class=" hljs bash">git help init</code></pre>
 <p>et lisez la documentation (touche <code>q</code> pour
 sortir).</p>
 </li>
@@ -302,13 +303,16 @@ fait...</p>
 "https://github.com/pixelman71100/cours-git/fork">ce lien</a>.
 GitHub va prendre quelques secondes pour vous en créer une copie
 personnelle (fork).</p>
-<p>Lisez le fichier de README, qui s’affiche dans le répertoire.
-Dans les réglages renommez ce repository, puis créez une copie
-locale du répertoire avec</p>
+<p>Lisez le fichier de README, qui s’affiche dans votre repository
+Github. Dans les réglages renommez ce repository, puis créez une
+copie locale du repository avec</p>
 <pre><code class=" hljs php">git <span class=
 "hljs-keyword">clone</span> <span class=
-"hljs-comment">url de votre repository</span>
-</code></pre>
+"hljs-comment">url de votre repository</span></code></pre>
+<p>Cliquez sur le bouton vert pour récupérer l'url du repository à
+cloner</p>
+<p><img src="code-github.png" alt=
+"Bouton Github pour récupérer l'url du repository à cloner"></p>
 <ol>
 <li>
 <p>Dans l’interface web de GitHub, éditez le fichier
@@ -328,7 +332,7 @@ git <span class="hljs-keyword">log</span>
 commitez les changements, puis poussez vos changements sur
 GitHub :</p>
 <pre><code class=" hljs perl">git status
-git <span class="hljs-keyword">push</span>
+git push
 </code></pre></li>
 <li>
 <p>Faites encore un changement à <code>README.md</code> dans
@@ -342,7 +346,7 @@ locale. Commitez. Essayer de pousser, que se passe-t-il ?</p>
 </li>
 <li>
 <p>Tirez, puis lisez le log avec</p>
-<pre class="bash"><code class=" hljs">git log --graph</code></pre>
+<pre><code class=" hljs">git log --graph</code></pre>
 <p class="rendu">Que s’est-il passé ?</p>
 <p>La commande donne le journal des commit du répertoire.</p>
 <p>Poussez maintenant.</p>
@@ -350,7 +354,8 @@ locale. Commitez. Essayer de pousser, que se passe-t-il ?</p>
 </ol>
 <p>Astuce : Si vous en avez marre de saisir votre login/passw à
 chaque commande, alors utilisez le code suivant sous Windows</p>
-<pre class="bash">git config credential.helper store</pre>
+<pre><code class=
+" hljs">git config credential.helper store</code></pre>
 <h3 class="rendu">Devoir #3 : Veuillez décrire le wokflow de
 modification et de mise en ligne de fichiers avec Git (liste des
 commandes)</h3>
