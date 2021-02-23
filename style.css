@@ -72,6 +72,8 @@ blockquote.cite > p:last-of-type:after { content: close-quote; }
 
 .rendu { border:2px dotted red; padding: 2px 8px; }
 
+.reponse { border:2px dotted blue; padding: 2px 8px; }
+
 article {border-top: 1px solid grey; }
 
 /* Print */
